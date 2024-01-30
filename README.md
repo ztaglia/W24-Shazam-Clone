@@ -1,5 +1,5 @@
-# Shazam Clone Using Signal Processing Techniques README
-### Project Leads: 
+# Shazam Clone Using Signal Processing
+### Project Leads 
 - Zachary Taglia (ztaglia@umich.edu)
 - Yuchen Huang (yuchenh@umich.edu)
 ---
@@ -14,27 +14,31 @@ When we hear our favorite song, our brains recognize it instantly. When soundwav
 - HAVE FUN!!!
 
 ### Timeline
-#### Week 1, Feb 11, 2024:
+#### Week 1, Feb 11, 2024
 - Introduction for the project 
 - Ice breaker
 - Basic python and concepts
-#### Week 2, Feb 18, 2024:
+#### Week 2, Feb 18, 2024
 - Explore dataset
 - Convert mp3 files to .wav files
 - Make visualizations with the dataset (matplotlib)
 - Introduce Fourier transform
 - Intuition behind music recognition algorithms
-#### Week 3, Mar 10, 2024:
+#### Week 3, Mar 10, 2024
 - Fourier transform review
 - Intro to constellation mapping
-#### Week 4, Mar 17, 2024:
+#### Week 4, Mar 17, 2024
 - Constellation mapping review
 - Intro to hash functions
-#### Week 5, Mar 24, 2024:
+#### Week 5, Mar 24, 2024
 - Optimization
-#### Week 6, Mar 31, 2024:
+#### Week 6, Mar 31, 2024
 - Optimization
-#### Week 7, Apr 7, 2024:
+#### Week 7, Apr 7, 2024
 - Optimization
-#### Project Expo, Apr 14, 2024:
+#### Project Expo, Apr 14, 2024
 - Show off what we've made!
+---
+### Project Setup
+1. Clone this repo:
+
