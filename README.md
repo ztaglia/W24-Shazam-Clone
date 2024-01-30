@@ -1,5 +1,7 @@
 # Shazam Clone Using Signal Processing Techniques README
-## Project Leads: Zachary Taglia and Yuchen Huang
+### Project Leads: 
+- Zachary Taglia (ztaglia@umich.edu)
+- Yuchen Huang (yuchenh@umich.edu)
 ---
 ### Introduction
 When we hear our favorite song, our brains recognize it instantly. When soundwaves graze our eardrums, they fire off several neurons that allow us to instantly recognize the collection of frequencies being produced. For a music recognition algorithm like Shazam, it’s a much different scenario: Our job will be to apply machine learning techniques, Fourier Transforms, and Hashing to help our algorithm distinguish between your favorite songs!
