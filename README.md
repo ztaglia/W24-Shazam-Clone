@@ -40,5 +40,10 @@ When we hear our favorite song, our brains recognize it instantly. When soundwav
 - Show off what we've made!
 ---
 ### Project Setup
-1. Clone this repo:
+1. Run these commands:
+   ```bash
+$ pip install pyarrow
+$ brew install ffmpeg
+$ pip install requests
+```
 
