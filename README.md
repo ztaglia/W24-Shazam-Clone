@@ -42,8 +42,8 @@ When we hear our favorite song, our brains recognize it instantly. When soundwav
 ### Project Setup
 1. Run these commands:
    ```bash
-$ pip install pyarrow
-$ brew install ffmpeg
+$ pip install pyarrow 
+$ brew install ffmpeg 
 $ pip install requests
 ```
 
