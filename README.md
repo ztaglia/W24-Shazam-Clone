@@ -44,6 +44,7 @@ When we hear our favorite song, our brains recognize it instantly. When soundwav
 ```
 $ pip install pyarrow
 $ pip install requests
+$ pip install scipy 
 $ brew install ffmpeg 
 ```
 If they don't work at first, try replacing "pip" with "pip3."
