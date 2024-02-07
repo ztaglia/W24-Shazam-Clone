@@ -58,3 +58,11 @@ $ source env/bin/activate
 ```
 $ pip3 install -r requirements.txt
 ```
+7. Type the following command into your IDE:
+```
+$ sqlite3 songs.db
+```
+8. Copy/paste the code from sql/schema.sql corresponding to the songs table and hit enter
+9. Do the same for "hashes"
+10. Type and enter ".exit"
+11. Start loading songs into your newly-created SQL database!
