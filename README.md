@@ -44,7 +44,17 @@ When we hear our favorite song, our brains recognize it instantly. When soundwav
 ```
 $ brew install ffmpeg 
 ```
-2. Clone this repo, and install dependencies in requirements.txt:
+2. Clone this repo
+3. Make a workspace in VS Code
+4. Create a virtual environment within the workspace folder:
 ```
-$ pip install -r requirements.txt
+$ python3 -m venv env
+```
+5. Activate your virtual environment:
+```
+$ source env/bin/activate
+```
+6. Install the required dependencies:
+```
+$ pip3 install -r requirements.txt
 ```
