@@ -1,0 +1,12 @@
+CREATE TABLE songs(
+  songname VARCHAR(40) NOT NULL,
+  artist VARCHAR(40) NOT NULL,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  audio_path TEXT NOT NULL
+);
+
+CREATE TABLE hashes(
+  hash_val INTEGER,
+  time_val INTEGER,
+  id INTEGER
+)
