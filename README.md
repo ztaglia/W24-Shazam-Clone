@@ -40,12 +40,11 @@ When we hear our favorite song, our brains recognize it instantly. When soundwav
 - Show off what we've made!
 ---
 ### Project Setup
-1. Run these commands:
+1. Install ffmpeg:
 ```
-$ pip install pyarrow
-$ pip install requests
-$ pip install scipy 
 $ brew install ffmpeg 
 ```
-If they don't work at first, try replacing "pip" with "pip3."
-
+2. Clone this repo, and install dependencies in requirements.txt:
+```
+$ pip install -r requirements.txt
+```
