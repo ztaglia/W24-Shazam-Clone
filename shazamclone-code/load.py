@@ -31,7 +31,7 @@ for n in range(1):
   data = [(songname, artist, wav_audio_path)]
 
 c.executemany(
-  "INSERT INTO your_table_name (songname, artist, audio_path) VALUES (?, ?, ?)", 
+  "INSERT INTO songs (songname, artist, audio_path) VALUES (?, ?, ?)", 
   data
 )
 
