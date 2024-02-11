@@ -14,7 +14,7 @@ file_path = None
 
 df = pd.read_csv(file_path)
 
-conn = sqlite3.connect('songs.db')
+conn = sqlite3.connect('songs.sqlite3')
 c = conn.cursor()
 
 for n in range(1):
