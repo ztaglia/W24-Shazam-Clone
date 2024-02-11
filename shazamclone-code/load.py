@@ -26,7 +26,7 @@ for n in range(1):
 
   # CHANGE FORMAT FROM STEREO TO MONO!
 
-  data = [(songname, artist, wav_audio_path)]
+  data = [(songname, artist, audio_path)]
 
 c.executemany(
   "INSERT INTO songs (songname, artist, audio_path) VALUES (?, ?, ?)", 

@@ -9,4 +9,4 @@ CREATE TABLE hashes(
   hash_val INTEGER,
   time_val INTEGER,
   id INTEGER
-)
+);
