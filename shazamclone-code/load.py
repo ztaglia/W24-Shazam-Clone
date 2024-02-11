@@ -7,7 +7,7 @@ import requests
 import sqlite3
 import os
 
-# TODO: Load wav file paths (not the files themselves! store those in a directory within shazamclone-code) 
+# TODO: Load song file paths (not the files themselves! store those in a directory within shazamclone-code) 
 #       and their respective song titles and artist names into songs.db
 
 file_path = None
@@ -25,8 +25,6 @@ for n in range(1):
   # TODO
 
   # CHANGE FORMAT FROM STEREO TO MONO!
-
-  # EXPORT WAV AUDIO FILES TO A FOLDER IN SHAZAMCLONE-CODE
 
   data = [(songname, artist, wav_audio_path)]
 
