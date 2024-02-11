@@ -40,9 +40,9 @@ When we hear our favorite song, our brains recognize it instantly. When soundwav
 - Show off what we've made!
 ---
 ### Project Setup
-1. Install ffmpeg:
+1. Install packages:
 ```
-$ brew install ffmpeg sqlite3 
+$ brew install ffmpeg sqlite3 librosa
 ```
 2. Clone this repo
 3. Make a workspace in VS Code
