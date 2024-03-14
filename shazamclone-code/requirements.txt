@@ -5,3 +5,4 @@ pydub
 pyarrow
 scipy
 requests
+librosa
