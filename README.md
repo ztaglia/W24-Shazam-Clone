@@ -28,10 +28,10 @@ When we hear our favorite song, our brains recognize it instantly. When soundwav
 - Fourier transform review
 - Intro to constellation mapping
 #### Week 4, Mar 17, 2024
-- Constellation mapping review
-- Intro to hash functions
+- Hash functions
+- Begin training our model!
 #### Week 5, Mar 24, 2024
-- Optimization
+- Testing and optimizations
 #### Week 6, Mar 31, 2024
 - Optimization
 #### Week 7, Apr 7, 2024
