@@ -3,6 +3,8 @@ from pydub import AudioSegment
 import librosa
 import sqlite3
 from tqdm import tqdm
+import pyaudio
+import wave
 
 def score_hashes_against_database(hashes, database):
     matches_per_song = {}
@@ -34,6 +36,36 @@ def score_hashes_against_database(hashes, database):
     
     return scores
 
+CHUNK = 1024
+FORMAT = pyaudio.paInt16
+CHANNELS = 1
+RATE = 48000
+
+p = pyaudio.PyAudio()
+
+stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, frames_per_buffer=CHUNK)
+
+print("Start recording...")
+
+frames = []
+seconds = 3
+for i in range(0, int(RATE / CHUNK * seconds)):
+    data = stream.read(CHUNK)
+    frames.append(data)
+
+print("recording stopped")
+
+stream.stop_stream()
+stream.close()
+p.terminate()
+
+wf = wave.open("output.wav", 'wb')
+wf.setnchannels(CHANNELS)
+wf.setsampwidth(p.get_sample_size(FORMAT))
+wf.setframerate(RATE)
+wf.writeframes(b''.join(frames))
+wf.close()
+
 database = {}
 with sqlite3.connect('songs.sqlite3') as conn:
     cur = conn.cursor()
@@ -47,10 +79,10 @@ with sqlite3.connect('songs.sqlite3') as conn:
         database[hash].append((source_time, song_index))
     print(len(database))
 
-audio = AudioSegment.from_file("songs/Clint Eastwood.m4a", format="mp4")
-audio.export("songs/clint-eastwood-vm.mp3", format="mp3", bitrate="192k")
+# audio = AudioSegment.from_file("songs/Clint Eastwood.m4a", format="mp4")
+# audio.export("songs/clint-eastwood-vm.mp3", format="mp3", bitrate="192k")
 
-Fs, song = librosa.load("songs/clint-eastwood-vm.mp3", sr=None)
+Fs, song = librosa.load("output.wav", sr=None)
 constellation = create_constellation_stft(song, Fs)
 hashes = create_hashes(constellation, None)
 
