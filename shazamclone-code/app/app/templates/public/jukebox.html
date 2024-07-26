@@ -1,0 +1,33 @@
+{% extends "public/templates/home_template.html" %}
+
+{% block nav %}
+
+<nav class="nav nav-masthead justify-content-center">
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link active" href="/jukebox">Jukebox</a>
+    <a class="nav-link" href="/about">About</a>
+</nav>
+
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="song-list-all">
+        <h2>Song List</h2>
+        <div class="song-list">
+            <ul>
+                {% for song in songs %}
+                <li>{{song[1]}} by {{song[2]}}</li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

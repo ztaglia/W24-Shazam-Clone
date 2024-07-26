@@ -1,0 +1,31 @@
+{% extends "public/templates/home_template.html" %}
+
+{% block nav %}
+
+<nav class="nav nav-masthead justify-content-center">
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="/jukebox">Jukebox</a>
+    <a class="nav-link active" href="/about">About</a>
+</nav>
+
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>About Shazach!</h2>
+            <p>Shazach is a clone of the music identification app Shazam. This website was made by University of Michigan student Zachary Taglia. 
+                Zach is currently a rising senior studying Data Science.</p>
+            <p>Shazach uses Short Time Fourier Transforms (STFTs) to assess songs for their most prominent frequencies. 
+                These frquencies are hashed into a table in SQL. When you test your song of choice (from the list of songs in the jukebox), the app searches for the song with the longest chain of matching frequencies!</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}
