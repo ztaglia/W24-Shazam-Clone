@@ -66,7 +66,7 @@
     const statusElement = document.getElementById('recordingStatus');
     
     document.getElementById('testButton').addEventListener('click', function(event) {
-        event.preventDefault();  // Prevent the default form submission
+        event.preventDefault();
     
         if (mediaRecorder && mediaRecorder.state === 'recording') {
             mediaRecorder.stop();
@@ -78,7 +78,6 @@
                 if (MediaRecorder.isTypeSupported('audio/webm')) {
                     options = { mimeType: 'audio/webm' };
                 } else {
-                    // Browser default MIME type will be used (typically opus codec in webm container)
                     console.warn('WEBM audio format is not supported. Falling back to default audio format.');
                 }
     
@@ -89,14 +88,11 @@
                 };
     
                 mediaRecorder.onstop = () => {
-                    // Create the final Blob from the audio chunks with the specified MIME type (either WAV or default)
                     const audioBlob = new Blob(audioChunks, { type: options.mimeType || 'audio/webm' });
     
-                    // Use FormData to send the audio blob to the server
                     let formData = new FormData();
                     formData.append('audio', audioBlob, 'recording' + (options.mimeType === 'audio/wav' ? '.wav' : '.webm'));
     
-                    // Send the data to the /test endpoint
                     fetch('/test', {
                         method: 'POST',
                         body: formData
@@ -116,14 +112,13 @@
                         console.error('Error:', error);
                     });
     
-                    // Reset the audio chunks for a new recording.
                     audioChunks = [];
                 };
     
                 mediaRecorder.start();
                 statusElement.textContent = 'Ten second recording started...';
     
-                // Stop recording after 5 seconds
+                // Stop recording after 10 seconds
                 setTimeout(() => {
                     mediaRecorder.stop();
                     console.log("Recording stopped after 10 seconds");
